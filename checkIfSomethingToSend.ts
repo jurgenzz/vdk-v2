@@ -19,9 +19,14 @@ export const checkIfSomethingToSend = () => {
 
   // check if we need to post !vd
 
-  const dateEnd = currentDate.slice(7) // 8:00:00 and 18:00:00
+  const d = new Date()
+  const h = d.getHours()
+  const m = d.getMinutes()
+  const s = d.getSeconds()
 
-  if (dateEnd === '8-00-00') {
+  const time = `${h}:${m}:${s}`
+
+  if (time === '10:0:0') {
     if (!vdSent) {
       vd()
       vdSent = true

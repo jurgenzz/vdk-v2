@@ -2,7 +2,7 @@ import { formatDate } from '../../../helpers/formatDate'
 import { formatDateFromStr } from '../../../helpers/formatDateFromStr'
 import { lookupNames } from './lookupNames'
 import { getNameDayByDate } from './getNameByDate'
-import { getGeneralChannels } from '../../../registerChannels'
+import { getVdChannels } from '../../../registerChannels'
 import { Message } from 'discord.js'
 import { sendMessage } from '../../..'
 
@@ -31,8 +31,8 @@ export const vd = (ctx?: Message) => {
   if (ctx) {
     sendMessage(ctx.channel.id, `${reply}.`)
   } else {
-    const generalChannels = getGeneralChannels()
-    generalChannels.forEach((channel) => {
+    const vdChannels = getVdChannels()
+    vdChannels.forEach((channel) => {
       sendMessage(channel, `${reply}.`)
     })
   }

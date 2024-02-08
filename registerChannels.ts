@@ -3,6 +3,7 @@ import { GuildChannel, GuildChannelManager } from 'discord.js'
 const npChannels: Map<string, string> = new Map([])
 const generalChannels: Map<string, string> = new Map([])
 const quizChannels: Map<string, string> = new Map([])
+const vdChannels: Map<string, string> = new Map([])
 
 export const registerChannels = (channels: GuildChannelManager, parentId: string) => {
   //   channels.cache.forEach()
@@ -23,6 +24,10 @@ export const registerChannels = (channels: GuildChannelManager, parentId: string
         quizChannels.set(channel.id, channel.id)
         break
       }
+
+      case 'vd': {
+        vdChannels.set(channel.id, channel.id)
+      }
     }
   })
 }
@@ -37,4 +42,8 @@ export const getGeneralChannels = () => {
 
 export const getQuizChannel = () => {
   return [...quizChannels.values()]
+}
+
+export const getVdChannels = () => {
+  return [...vdChannels.values()]
 }

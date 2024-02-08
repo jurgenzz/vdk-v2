@@ -36,4 +36,4 @@ export const sendMessage = async (channelId: string, text: string) => {
 
 setInterval(() => {
   checkIfSomethingToSend()
-}, 1000)
+}, 700)
