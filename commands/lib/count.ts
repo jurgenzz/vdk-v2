@@ -45,11 +45,8 @@ export const count = async (ctx: Message) => {
   }
 
   if (results.length) {
-    sendMessage(
-      channel.id,
-      `PMPL stāsta, ka Latvijā ir apmēram šādi - ${results.join(', ')}. http://vd.jurg.is/n?q=${query}`
-    )
+    sendMessage(channel.id, `PMLP stāsta, ka Latvijā ir apmēram šādi - ${results.join(', ')}. ${url}`)
   } else {
-    sendMessage(channel.id, `PMLP saka, ka nav ar šādu vārdu neviens.`)
+    sendMessage(channel.id, `PMLP saka, ka šis vārds vēl ir brīvs.`)
   }
 }

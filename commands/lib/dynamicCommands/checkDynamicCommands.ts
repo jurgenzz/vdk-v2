@@ -50,7 +50,7 @@ export const updateCommands = async () => {
   try {
     // const res = await fetch(`${config.commandsApi}/api/commands`)
     const res = await fetch(
-      'https://gist.githubusercontent.com/jurgenzz/ead4461470368ed0279bca88bbf7de08/raw/db9c1e4ef6da0085326d2a2c1a851b0b408505fb/commands.json'
+      'https://gist.githubusercontent.com/jurgenzz/ead4461470368ed0279bca88bbf7de08/raw/1ee1718a88f39367028080034e93059be26d0e1f/commands.json'
     )
 
     const commandsRe = await res.json()
